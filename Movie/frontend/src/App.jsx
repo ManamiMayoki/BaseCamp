@@ -12,15 +12,21 @@ function App() {
       <div>
         <p>Hello world!</p>
       </div>
-      <Text />
+      <Text display="Hello, React!" />
+      <Text display="Welcome to Vite!" />
     </>
   )
 }
 
-function Text(){
+//image
+//name of the movie
+//release date
+//favorite button
+
+function Text({display}){
   return (
     <div>
-      <p>Hello World!</p>
+      <p>{display}</p>
     </div>
   )
 }
