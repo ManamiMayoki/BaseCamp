@@ -1,34 +1,22 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
+import Home from "./pages/Home"
+import MovieCard from "./components/MovieCard"
 
 function App() {
-  const [count, setCount] = useState(0)
+  const movieNumber = 1;
 
   return (
     <>
-      <div>
-        <p>Hello world!</p>
-      </div>
-      <Text display="Hello, React!" />
-      <Text display="Welcome to Vite!" />
+    {MovieNumber === 1 ? (
+      <MovieCard movie={{title:"Tim's Flim",release_date: "2024"}}/>
+    ) : (
+      <MovieCard movie={{title:"Joe's Flim",release_date: "2024"}}/>
+    )}
+      <MovieCard movie={{title:"Tim's Flim",release_date: "2024"}}/>
     </>
   )
 }
 
-//image
-//name of the movie
-//release date
-//favorite button
-
-function Text({display}){
-  return (
-    <div>
-      <p>{display}</p>
-    </div>
-  )
-}
 
 export default App
